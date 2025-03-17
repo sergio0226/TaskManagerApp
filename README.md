@@ -1,1 +1,129 @@
-# TaskManagerApp
+# Task Manager Web App
+
+## 📌 Project Overview
+
+### 🎯 Objective
+Develop a full-stack **Task Manager** application that enables users to manage tasks, track their status, and authenticate securely.
+
+### 🛠️ Technologies Used
+- **Frontend:** `Angular`, `Angular Material`, `TypeScript`, `HTML`, `CSS`
+- **Backend:** `ASP.NET Core Web API`, `C#`, `Entity Framework Core`
+- **Database:** `SQL Server` / `PostgreSQL`
+- **Authentication:** `JWT (JSON Web Token)`
+- **Hosting (Optional):** `Azure` / `AWS` / `Docker`
+
+---
+## 🚀 Core Features & Requirements
+
+### 🔑 User Authentication & Authorization
+- Users can **register, log in, and log out**
+- JWT authentication and role-based access control (**Admin/User**)
+- Secure password storage using hashing (**e.g., BCrypt**)
+
+### 📋 Task Management
+- Users can **create, edit, delete, and mark tasks as complete**
+- Tasks include:
+  - **Title**
+  - **Description**
+  - **Due date**
+  - **Priority**
+  - **Status**
+- Task filtering and search functionality
+- **Admins** can manage all users' tasks
+
+### 🎨 UI & UX
+- Responsive design using **Angular Material**
+- **Dark/Light mode toggle** (Optional)
+
+### 🔗 API & Database
+- RESTful API with **ASP.NET Core**
+- CRUD endpoints for **tasks & users**
+- SQL database for **users, tasks, and roles**
+
+---
+## 📅 Milestones & Checkpoints
+
+### **Phase 1: Backend Development (Week 1-2)**
+- [x] Set up **ASP.NET Core Web API** with authentication  
+- [x] Implement **JWT authentication** & role-based access  
+- [x] Create **Task & User models** with **Entity Framework Core**  
+- [x] Develop CRUD API endpoints for tasks  
+- [x] Database integration (**SQL Server / PostgreSQL**)
+
+### **Phase 2: Frontend Development (Week 3-4)**
+- [x] Set up **Angular project** with routing  
+- [x] Create **login/register components** with JWT authentication  
+- [x] Build **task management components** (**task list, create/edit, filters**)  
+- [x] Implement API integration (**HTTP calls using Angular services**)
+
+### **Phase 3: Testing & Deployment (Week 5-6)**
+- [x] Unit Testing: Backend (`xUnit`) & Frontend (`Jest/Karma`)  
+- [x] Dockerize the application (Optional)  
+- [x] Deploy to **Azure / AWS** (Optional)
+
+---
+## 🧪 Testing & Validation
+
+### 🔍 Test Cases
+
+| **Feature**       | **Test Case**                               | **Expected Result**               |
+|-------------------|---------------------------------|------------------------------|
+| **User Registration** | Register with valid credentials | Success message & user stored |
+| **Login**            | Log in with correct credentials | JWT token received           |
+| **Authentication**   | Access protected route without login | Returns `401 Unauthorized`  |
+| **Create Task**      | Submit valid task details       | Task appears in list         |
+| **Edit Task**        | Modify existing task           | Updated task in UI & DB      |
+| **Delete Task**      | Remove a task                  | Task deleted successfully    |
+| **Role Management**  | Admin deletes user task        | Task removed                 |
+| **API Rate Limits**  | Multiple invalid login attempts | Account temporarily locked  |
+
+---
+## 🎓 Exam-Style Exercises
+
+### **Exercise 1: API Development**
+**Task:** Implement an API endpoint to retrieve all tasks sorted by due date (ascending).  
+**Requirements:**  
+- Create a new endpoint in `TaskController`  
+- Return only **active tasks**, sorted by due date  
+- Write a **unit test** to validate sorting
+
+### **Exercise 2: Frontend UI Implementation**
+**Task:** Highlight overdue tasks in **red** and completed tasks in **green**.  
+**Requirements:**  
+- Use **Angular directives** for dynamic styling  
+- Ensure real-time style updates  
+- Write an **automated test** to validate styles
+
+### **Exercise 3: Authentication & Security**
+**Task:** Implement **email verification** before account activation.  
+**Requirements:**  
+- Modify registration flow to send a **verification email**  
+- Create an endpoint for **email verification** using a token  
+- Write test cases for **successful & failed verification**
+
+### **Exercise 4: Role-Based Authorization**
+**Task:** Introduce a **Manager role** who can view all tasks but cannot delete them.  
+**Requirements:**  
+- Modify database to include a **Manager role**  
+- Update **authorization logic** in `TaskController`  
+- Implement **UI changes** (disable delete button for managers)  
+- Test role-based access control
+
+### **Exercise 5: Dockerization & Deployment**
+**Task:** Dockerize and deploy using Docker Compose.  
+**Requirements:**  
+- Create a `Dockerfile` for frontend & backend  
+- Write a `docker-compose.yml` file  
+- Deploy & test containerized services locally
+
+---
+## 🎯 Stretch Goals (Bonus Features)
+- Implement **real-time task updates** using `SignalR`
+- Add **task categories & priorities**
+- Deploy with **Docker & Kubernetes** for scalability
+
+---
+## 💡 Final Thoughts
+This guide was generated by AI!
+
+
